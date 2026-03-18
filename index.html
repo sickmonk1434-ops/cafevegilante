@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Vegilante – Continental, Italian & Mexican Cuisine</title>
+  <meta name="description" content="Café Vegilante – Wholesome Chicken & Veg Continental, Italian and Mexican food. Order via WhatsApp or on Zomato & Swiggy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Café <span>Vegilante</span></a>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="https://wa.me/919999999999?text=Hi%20I%20want%20to%20place%20an%20order%20at%20Cafe%20Vegilante" target="_blank" class="btn btn-wa">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.533 5.85L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.017-1.374l-.36-.214-3.727.977.994-3.638-.234-.374A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+      Order on WhatsApp
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#menu" onclick="closeMobileMenu()">Menu</a>
+    <a href="#order" onclick="closeMobileMenu()">Order</a>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="https://wa.me/919999999999?text=Hi%20I%20want%20to%20place%20an%20order%20at%20Cafe%20Vegilante" target="_blank" class="btn btn-wa" style="margin-top:1rem">Order on WhatsApp</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+  <img src="hero_banner_1773854023227.png" alt="Cafe Vegilante hero food spread" class="hero-bg" />
+  <div class="hero-content">
+    <p class="hero-sub">Welcome to</p>
+    <h1 class="hero-title">CAFÉ<br/><span>VEGILANTE</span></h1>
+    <p class="hero-desc">Wholesome, delicious dishes made with passion — a feast that celebrates freshness and flavor.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn btn-primary">Explore Menu</a>
+      <a href="https://wa.me/919999999999?text=Hi%20I%20want%20to%20place%20an%20order%20at%20Cafe%20Vegilante" target="_blank" class="btn btn-wa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.533 5.85L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.017-1.374l-.36-.214-3.727.977.994-3.638-.234-.374A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+        Order on WhatsApp
+      </a>
+    </div>
+    <div class="delivery-badges">
+      <a href="https://www.zomato.com/hyderabad/cafe-vegilante-adibatla/order" target="_blank" class="delivery-badge zomato">🍴 Order on Zomato</a>
+      <a href="https://www.swiggy.com/city/hyderabad/cafe-vegilante-adibatla-and-turkayamjal-rest1259121" target="_blank" class="delivery-badge swiggy">🛵 Order on Swiggy</a>
+      <a href="https://www.instagram.com/cafevegilante/" target="_blank" class="delivery-badge ig">📷 Follow on Instagram</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll to explore</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ========== CUISINE BADGES ========== -->
+<section class="cuisine-strip">
+  <div class="cuisine-item"><span class="cuisine-icon">🌍</span><span>Continental</span></div>
+  <div class="cuisine-divider"></div>
+  <div class="cuisine-item"><span class="cuisine-icon">🇮🇹</span><span>Italian</span></div>
+  <div class="cuisine-divider"></div>
+  <div class="cuisine-item"><span class="cuisine-icon">🌮</span><span>Mexican</span></div>
+  <div class="cuisine-divider"></div>
+  <div class="cuisine-item"><span class="cuisine-icon">🐔</span><span>Chicken & Veg</span></div>
+</section>
+
+<!-- ========== MENU ========== -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Our Exquisite</p>
+      <h2 class="section-title">Menu</h2>
+      <p class="section-sub">Crafted with passion using the finest ingredients</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="appetizer">Appetizers</button>
+      <button class="filter-btn" data-filter="salad">Salads</button>
+      <button class="filter-btn" data-filter="main">Main Course</button>
+      <button class="filter-btn" data-filter="dessert">Desserts</button>
+      <button class="filter-btn" data-filter="drinks">Drinks</button>
+    </div>
+
+    <!-- APPETIZERS -->
+    <div class="menu-category">
+      <h3 class="category-title"><span>🍽️</span> Appetizers</h3>
+      <div class="menu-grid">
+
+        <div class="menu-card" data-category="appetizer">
+          <div class="card-img-wrap">
+            <img src="bruschetta_1773854089322.png" alt="Bruschetta" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Bruschetta</h4>
+            <p>Toasted bread topped with fresh tomatoes, garlic, basil, and extra virgin olive oil.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Bruschetta%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="appetizer">
+          <div class="card-img-wrap">
+            <img src="falafel_hummus_1773854206247.png" alt="Falafel With Hummus" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Falafel With Hummus</h4>
+            <p>Crispy golden falafel served with smooth, creamy hummus and fresh Mediterranean sides.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Falafel%20With%20Hummus%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="appetizer">
+          <div class="card-img-wrap">
+            <img src="chicken_wings_1773854057234.png" alt="Peri Peri Chicken Wings" loading="lazy" />
+            <span class="badge non-veg">Non-Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Peri Peri Chicken Wings</h4>
+            <p>Juicy chicken wings coated in bold peri-peri spices, grilled to perfection with a flavorful dipping sauce.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Peri%20Peri%20Chicken%20Wings%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="appetizer">
+          <div class="card-img-wrap">
+            <img src="grilled_chicken_1773854039267.png" alt="Butter Milk Fried Chicken" loading="lazy" />
+            <span class="badge non-veg">Non-Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Butter & Milk Fried Chicken</h4>
+            <p>Crispy fried chicken coated in a rich butter and milk glaze — creamy flavor and golden crunch.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Butter%20Milk%20Fried%20Chicken%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SALADS -->
+    <div class="menu-category">
+      <h3 class="category-title"><span>🥗</span> Salads</h3>
+      <div class="menu-grid">
+
+        <div class="menu-card" data-category="salad">
+          <div class="card-img-wrap">
+            <img src="caesar_salad_1773854107082.png" alt="Veg Caesar Salad" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Veg Caesar Salad</h4>
+            <p>Crisp lettuce tossed with creamy Caesar dressing, crunchy croutons, cherry tomatoes, and parmesan.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Veg%20Caesar%20Salad%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="salad">
+          <div class="card-img-wrap">
+            <img src="caesar_salad_1773854107082.png" alt="Paneer Tikka Salad" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Paneer Tikka Salad</h4>
+            <p>Grilled paneer cubes marinated in aromatic spices served on fresh greens, bell peppers, and cucumbers.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Paneer%20Tikka%20Salad%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="salad">
+          <div class="card-img-wrap">
+            <img src="burrito_bowl_1773854140083.png" alt="Mexican Salad" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Mexican Salad</h4>
+            <p>Colorful mix of fresh greens, corn, black beans, bell peppers, cherry tomatoes with a lime-cilantro dressing.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Mexican%20Salad%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="salad">
+          <div class="card-img-wrap">
+            <img src="caesar_salad_1773854107082.png" alt="Greek Salad" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Greek Salad</h4>
+            <p>Refreshing mix of crisp lettuce, cucumbers, cherry tomatoes, red onions, Kalamata olives, and feta cheese.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Greek%20Salad%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="salad">
+          <div class="card-img-wrap">
+            <img src="caesar_salad_1773854107082.png" alt="Watermelon Feta Salad" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Watermelon Feta Salad</h4>
+            <p>Sweet, juicy watermelon cubes paired with creamy feta, fresh mint leaves, and a light citrus dressing.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Watermelon%20Feta%20Salad%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="salad">
+          <div class="card-img-wrap">
+            <img src="grilled_chicken_1773854039267.png" alt="Chicken Tikka Salad" loading="lazy" />
+            <span class="badge non-veg">Non-Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Chicken Tikka Salad</h4>
+            <p>Fresh garden greens topped with flavorful chicken tikka, crisp vegetables, and a light dressing.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Chicken%20Tikka%20Salad%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MAIN COURSE -->
+    <div class="menu-category">
+      <h3 class="category-title"><span>🍛</span> Main Course</h3>
+      <div class="menu-grid">
+
+        <div class="menu-card" data-category="main">
+          <div class="card-img-wrap">
+            <img src="burrito_bowl_1773854140083.png" alt="Quinoa Burrito Bowl" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Quinoa Burrito Bowl</h4>
+            <p>Hearty bowl of fluffy quinoa topped with fresh vegetables, beans, salsa, and zesty dressing.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Quinoa%20Burrito%20Bowl%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="main">
+          <div class="card-img-wrap">
+            <img src="grilled_chicken_1773854039267.png" alt="Grilled Cottage Cheese Steak" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Grilled Cottage Cheese Steak</h4>
+            <p>Thick slices of cottage cheese marinated in aromatic spices, flame-grilled with roasted vegetables.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Grilled%20Cottage%20Cheese%20Steak%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="main">
+          <div class="card-img-wrap">
+            <img src="bruschetta_1773854089322.png" alt="Grilled Tofu Sizzler" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Grilled Tofu Sizzler</h4>
+            <p>Smoky grilled tofu on a sizzling platter with stir-fried veggies, spiced rice, and tangy-hot sauce.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Grilled%20Tofu%20Sizzler%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="main">
+          <div class="card-img-wrap">
+            <img src="grilled_chicken_1773854039267.png" alt="Pollo Al Pesto" loading="lazy" />
+            <span class="badge non-veg">Non-Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Pollo Al Pesto</h4>
+            <p>Tender grilled chicken tossed in a rich basil pesto sauce, served with fresh herbs and Italian flavor.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Pollo%20Al%20Pesto%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="main">
+          <div class="card-img-wrap">
+            <img src="quesadillas_1773854168534.png" alt="Quesadillas" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Quesadillas</h4>
+            <p>Flavorful fusion stuffed with spiced paneer, onions, bell peppers, and melted cheese.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Quesadillas%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="main">
+          <div class="card-img-wrap">
+            <img src="grilled_chicken_1773854039267.png" alt="Chicken Breast With Peri-Peri Sauce" loading="lazy" />
+            <span class="badge non-veg">Non-Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Chicken Breast With Peri-Peri Sauce</h4>
+            <p>Succulent grilled chicken breast smothered in a bold, fiery peri-peri sauce — a continental classic.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Chicken%20Breast%20Peri%20Peri%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="menu-category">
+      <h3 class="category-title"><span>🍰</span> Desserts</h3>
+      <div class="menu-grid">
+
+        <div class="menu-card" data-category="dessert">
+          <div class="card-img-wrap">
+            <img src="chocolate_lava_cake_1773854123812.png" alt="Chocolate Lava Cake" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Chocolate Lava Cake</h4>
+            <p>Warm chocolate cake with a molten center, served with a scoop of vanilla ice cream.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Chocolate%20Lava%20Cake%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="dessert">
+          <div class="card-img-wrap">
+            <img src="chocolate_lava_cake_1773854123812.png" alt="New York Cheesecake" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>New York Cheesecake</h4>
+            <p>Classic creamy cheesecake with graham cracker crust and your choice of topping.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20New%20York%20Cheesecake%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="dessert">
+          <div class="card-img-wrap">
+            <img src="chocolate_lava_cake_1773854123812.png" alt="Special Cakes" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Special Cakes</h4>
+            <p>Custom cakes for special occasions — crafted with love to make your celebration memorable.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20enquire%20about%20Special%20Cakes%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Enquire via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="menu-category">
+      <h3 class="category-title"><span>🥂</span> Drinks</h3>
+      <div class="menu-grid">
+
+        <div class="menu-card" data-category="drinks">
+          <div class="card-img-wrap">
+            <img src="iced_espresso_1773854186185.png" alt="Iced Espresso" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Iced Espresso</h4>
+            <p>Bold and refreshing coffee made by pouring freshly brewed espresso over ice. Strong and energizing.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Iced%20Espresso%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="card-img-wrap">
+            <img src="iced_espresso_1773854186185.png" alt="Blue Lady" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Blue Lady</h4>
+            <p>Refreshing vibrant blue mocktail with a sweet citrus flavor and cool, smooth finish.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Blue%20Lady%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="card-img-wrap">
+            <img src="iced_espresso_1773854186185.png" alt="Hazelnut Hot Chocolate" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Hazelnut Hot Chocolate</h4>
+            <p>Rich and comforting blend of creamy hot chocolate infused with smooth hazelnut flavor.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Hazelnut%20Hot%20Chocolate%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="card-img-wrap">
+            <img src="iced_espresso_1773854186185.png" alt="Biscoff Frappe" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Biscoff Frappe</h4>
+            <p>Creamy ice-blended drink with rich coffee and the caramelized flavor of Biscoff. Smooth and indulgent.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Biscoff%20Frappe%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="card-img-wrap">
+            <img src="iced_espresso_1773854186185.png" alt="Cranberry Coffee" loading="lazy" />
+            <span class="badge veg">Veg</span>
+          </div>
+          <div class="card-body">
+            <h4>Cranberry Coffee</h4>
+            <p>Unique blend of smooth coffee with a hint of tart cranberry — a refreshing balance of bold and fruity.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/919999999999?text=I%20want%20to%20order%20Cranberry%20Coffee%20from%20Cafe%20Vegilante" target="_blank" class="order-btn">Order via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ORDER SECTION ========== -->
+<section class="order-section" id="order">
+  <div class="container order-inner">
+    <div class="section-header light">
+      <p class="section-label">Hungry? Place an</p>
+      <h2 class="section-title">Order Now</h2>
+      <p class="section-sub">Choose your favorite delivery platform or chat with us directly!</p>
+    </div>
+    <div class="order-cards">
+      <a href="https://wa.me/919999999999?text=Hi%20I%20want%20to%20place%20an%20order%20at%20Cafe%20Vegilante" target="_blank" class="order-card wa-card">
+        <div class="order-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.533 5.85L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.017-1.374l-.36-.214-3.727.977.994-3.638-.234-.374A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+        </div>
+        <h3>WhatsApp</h3>
+        <p>Chat directly with us and place your order instantly</p>
+        <span class="order-card-cta">Order Now →</span>
+      </a>
+      <a href="https://www.zomato.com/hyderabad/cafe-vegilante-adibatla/order" target="_blank" class="order-card zomato-card">
+        <div class="order-card-icon">🍴</div>
+        <h3>Zomato</h3>
+        <p>Order on Zomato for fast delivery to your doorstep</p>
+        <span class="order-card-cta">Order on Zomato →</span>
+      </a>
+      <a href="https://www.swiggy.com/city/hyderabad/cafe-vegilante-adibatla-and-turkayamjal-rest1259121" target="_blank" class="order-card swiggy-card">
+        <div class="order-card-icon">🛵</div>
+        <h3>Swiggy</h3>
+        <p>Order on Swiggy for quick and reliable delivery</p>
+        <span class="order-card-cta">Order on Swiggy →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about-section" id="about">
+  <div class="container about-inner">
+    <div class="about-text">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">About Us</h2>
+      <p>At <strong>Café Vegilante</strong>, we believe great food begins with great ingredients. We serve wholesome Continental, Italian and Mexican dishes — both Chicken and Vegetarian — crafted daily with passion and care.</p>
+      <p>Whether you're craving a bold Peri-Peri Chicken, a hearty Quinoa Burrito Bowl, or a classic Bruschetta, every plate is a celebration of freshness and flavor.</p>
+      <p class="about-owner">A Unit by <strong>Vijaya Lakshmi Maram</strong></p>
+    </div>
+    <div class="about-img-wrap">
+      <img src="hero_banner_1773854023227.png" alt="Cafe Vegilante ambiance" />
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <p class="footer-logo">Café <span>Vegilante</span></p>
+      <p>Wholesome. Delicious. Crafted with Passion.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#hero">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="footer-order">
+      <h4>Order & Connect</h4>
+      <a href="https://wa.me/919999999999?text=Hi%20I%20want%20to%20place%20an%20order%20at%20Cafe%20Vegilante" target="_blank">📱 WhatsApp</a>
+      <a href="https://www.zomato.com/hyderabad/cafe-vegilante-adibatla/order" target="_blank">🍴 Zomato</a>
+      <a href="https://www.swiggy.com/city/hyderabad/cafe-vegilante-adibatla-and-turkayamjal-rest1259121" target="_blank">🛵 Swiggy</a>
+      <a href="https://www.instagram.com/cafevegilante/" target="_blank">📷 Instagram</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <p>© 2025 Café Vegilante — A Unit by Vijaya Lakshmi Maram. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/919999999999?text=Hi%20I%20want%20to%20place%20an%20order%20at%20Cafe%20Vegilante" target="_blank" class="float-wa" aria-label="Order on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.533 5.85L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.017-1.374l-.36-.214-3.727.977.994-3.638-.234-.374A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+</a>
+
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Mobile menu
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+function closeMobileMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// Menu filter tabs
+const filterBtns = document.querySelectorAll('.filter-btn');
+const menuCards = document.querySelectorAll('.menu-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    menuCards.forEach(card => {
+      const show = filter === 'all' || card.dataset.category === filter;
+      card.style.display = show ? '' : 'none';
+      if(show) card.classList.add('card-appear');
+    });
+  });
+});
+
+// Intersection observer for card animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.menu-card, .order-card').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
