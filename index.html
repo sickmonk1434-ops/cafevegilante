@@ -531,6 +531,47 @@
   </div>
 </section>
 
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials-section" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Wall of Love</p>
+      <h2 class="section-title">What Guests Say</h2>
+      <p class="section-sub">Read our 5-star Google Reviews</p>
+    </div>
+  </div>
+  
+  <div class="scroller" data-direction="left" data-speed="slow">
+    <div class="scroller__inner">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Absolutely loved the Peri-Peri Chicken and the Caesar Salad! The vibe is amazing and the service is super quick. Highly recommend!"</p>
+        <p class="review-author">— Anjali R.</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"One of the best cafes in Adibatla! The Quinoa Burrito Bowl is so fresh and flavorful. Great place to chill with friends."</p>
+        <p class="review-author">— Rahul M.</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The Mexican Quesadillas were out of this world. Ordered via WhatsApp and the food was hot and perfectly packed!"</p>
+        <p class="review-author">— Sneha K.</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Fantastic food! The Bruschetta and Iced Espresso combinations are brilliant. Very aesthetic and clean!"</p>
+        <p class="review-author">— Vikram D.</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Beautiful cafe and excellent menu combinations. The Chocolate Lava Cake is a masterpiece. 10/10!"</p>
+        <p class="review-author">— Priya S.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== ABOUT ========== -->
 <section class="about-section" id="about">
   <div class="container about-inner">
@@ -618,6 +659,20 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.menu-card, .order-card').forEach(el => observer.observe(el));
+// Infinite scroll for testimonials
+const scrollers = document.querySelectorAll('.scroller');
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  scrollers.forEach((scroller) => {
+    scroller.setAttribute('data-animated', true);
+    const scrollerInner = scroller.querySelector('.scroller__inner');
+    const scrollerContent = Array.from(scrollerInner.children);
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute('aria-hidden', true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
 </script>
 </body>
 </html>
