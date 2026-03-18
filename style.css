@@ -410,6 +410,30 @@ body {
 .order-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem; }
 .order-card-cta { font-weight: 700; font-size: 0.9rem; }
 
+/* ============================================================ REELS */
+.reels-section {
+  padding: 6rem 0;
+  background: var(--dark3);
+  border-top: 1px solid rgba(201,168,76,0.15);
+}
+.reels-section .section-sub a {
+  color: var(--gold); text-decoration: none; font-weight: 600;
+}
+.reels-section .section-sub a:hover { text-decoration: underline; }
+.ig-widget-container {
+  max-width: 1000px; margin: 0 auto;
+  min-height: 300px;
+  position: relative;
+}
+.widget-fallback {
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed rgba(201,168,76,0.4);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  text-align: center; color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
 /* ============================================================ ABOUT */
 .about-section { padding: 6rem 0; background: var(--dark); }
 .about-inner {
